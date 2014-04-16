@@ -1,10 +1,11 @@
 Brewbeck::Application.routes.draw do
+  get "poll/show"
     devise_for :users
     resources :beer
     resources :brewery
 
-    get "/brewery/poll_breweries", to: "brewery#poll_breweries"
-    post "/brewery/poll_breweries", to: "brewery#poll_breweries"
+    get "/poll/poll_breweries", to: "poll#show"
+    post "/poll/poll_breweries", to: "poll#show"
 
     root :to => "beer#index"
 end
