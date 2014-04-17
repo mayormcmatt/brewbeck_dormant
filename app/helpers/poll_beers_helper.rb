@@ -1,0 +1,2 @@
+module PollBeersHelper
+end

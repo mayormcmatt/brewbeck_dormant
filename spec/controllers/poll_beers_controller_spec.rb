@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe PollController do
+describe PollBeersController do
 
   describe "GET 'show'" do
     it "returns http success" do
