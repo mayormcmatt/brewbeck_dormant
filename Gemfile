@@ -6,6 +6,10 @@ gem 'rails', '4.0.4'
 # Authentication with Devise
 gem 'devise', '~> 3.2.4'
 
+gem 'json'
+
+gem 'typhoeus'
+
 # Serializers allows easier access to JSON
 gem 'active_model_serializers'
 
