@@ -14,10 +14,12 @@ class PollBeersController < ApplicationController
                 # Can't figure out how to get the brewery_id from API call into model
                 # For now leave it; when implemented don't forget to
                 # move the comma and parenthesis
-                if info["breweries"][0]["id"] == nil
-                    break
-                else
-                    beer_stats.brewery_id = info["breweries"][0]["id"]
+                if beer_stats.brewery_id == 0 || nil
+                    begin
+                        beer_stats.brewery_id = info["breweries"][0]["id"]
+                    rescue
+                        beer_stats.brewery_id = "No brewery information"
+                    end
                 end
                 beer_stats.save
             end
