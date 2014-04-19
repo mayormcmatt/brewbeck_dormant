@@ -2,7 +2,7 @@ class PollBeersController < ApplicationController
 
     def show
         page_number = 1
-        until page_number == 6
+        until page_number == 5
             response = Typhoeus.get("http://api.brewerydb.com/v2/beers?*&withBreweries=Y&key=5a0a2875bbd1e7931736df7a5672f65f&p=#{page_number}")
             parsed = JSON.parse(response.response_body)
 
@@ -14,11 +14,13 @@ class PollBeersController < ApplicationController
                 # Can't figure out how to get the brewery_id from API call into model
                 # For now leave it; when implemented don't forget to
                 # move the comma and parenthesis
-                if beer_stats.brewery_id == 0 || nil
+                if beer_stats.brewery_id == "0" || nil
                     begin
                         beer_stats.brewery_id = info["breweries"][0]["id"]
-                    rescue
+                    rescue NoMethodError
                         beer_stats.brewery_id = "No brewery information"
+                    else
+                        beer_stats.brewery_id = info["breweries"][0]["id"]
                     end
                 end
                 beer_stats.save
