@@ -4,7 +4,6 @@ brewbeckController.controller('BeerCtrl', ['$scope', '$http', function($scope, $
     function getBeers(){
         $http.get('./beer.json').success(function(data) {
             $scope.beers = data;
-            console.log(data)
         });
     }
 }]);
