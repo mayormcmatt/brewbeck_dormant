@@ -14,6 +14,10 @@ brewbeckRouter.config(['$routeProvider', function($routeProvider) {
     $routeProvider
     .when('/', {
         templateUrl: '/templates/dashboard.html',
-        controller: 'HomeCtrl'
+        controller: 'BeerCtrl'
+    })
+    .when('/beer_selection', {
+        templateUrl: '/templates/beer_selection.html',
+        controller: 'BeerCtrl'
     });
 }]);
