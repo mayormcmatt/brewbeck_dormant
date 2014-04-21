@@ -3,6 +3,11 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.4'
 
+# That's right: it's AngularJS time
+gem 'angularjs-rails', '~> 1.2.14'
+
+gem 'ngmin-rails'
+
 # Authentication with Devise
 gem 'devise', '~> 3.2.4'
 
