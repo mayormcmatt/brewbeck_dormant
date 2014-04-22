@@ -1,0 +1,32 @@
+.beer-list {
+    list-style-type: none;
+}
+
+.each-beer {
+    border: 2px solid;
+    margin: 5px;
+    border-radius: 10px;
+    background-color: #C6CB3B;
+}
+
+.beer-drop {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.beer-drop a {
+    text-decoration: none;
+}
+
+.beer-drop ul li{
+    list-style: none;
+    display: none;
+}
+
+.beer-drop ul li:hover{
+    background: black;
+}
+.beer-drop ul li a {
+    text-decoration: none;
+}

@@ -111,6 +111,9 @@ GEM
     fastercsv (1.5.5)
     ffi (1.9.3)
     formatador (0.2.4)
+    foundation-rails (5.2.2.0)
+      railties (>= 3.1.0)
+      sass (>= 3.2.0)
     grit (2.5.0)
       diff-lcs (~> 1.1)
       mime-types (~> 1.15)
@@ -299,6 +302,7 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   devise (~> 3.2.4)
   factory_girl
+  foundation-rails (~> 5.2.2.0)
   guard-rspec
   jazz_hands
   jbuilder (~> 1.2)

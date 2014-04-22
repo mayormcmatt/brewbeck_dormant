@@ -1,7 +1,8 @@
 var brewbeckApp = angular.module('brewbeckApp', [
     'brewbeckRouter',
     'brewbeckController',
-    'ngResource'
+    'ngResource',
+    'ngDropdowns'
     ]);
 
 var brewbeckController = angular.module('brewbeckController', []);
